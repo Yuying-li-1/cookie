@@ -5,7 +5,7 @@
 <SCRIPT type = "text/javascript">
 
  //var maxtime = 25 * 60;
- var maxtime = 10;
+ var maxtime = 70;
  var counting = 0;
 
  /*function checkCookie() {
@@ -22,7 +22,7 @@
 
    else {
      document.cookie = 'temp = 0; path=/;  max-age= 11;';
-     console.log("cookie saved");
+     //console.log("cookie created");
    }
 
   var diffValue = maxtime -counting;
@@ -32,16 +32,16 @@
     var seconds = Math.floor(diffValue % 60);
     var msg = minutes + "minuts" + seconds + "seconds";
     document.all["timer"].innerHTML = msg;
-    console.log("counting IS "+ counting);
+    //console.log("counting IS "+ counting);
     counting += 1;
-    console.log("counting is "+ counting);
-    document.cookie="temp = "+ counting +"; path=/;  max-age= 11;";
+    //console.log("counting is "+ counting);
+    document.cookie="temp = "+ counting +"; path=/;  max-age= 71;";
 
   }
 
   else{
     clearInterval(timer);
-    console.log("counting is over at "+ counting);
+    //console.log("counting is over at "+ counting);
   }
 }
 
