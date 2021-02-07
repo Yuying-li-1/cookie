@@ -16,7 +16,7 @@
    var check = document.cookie.split(";")[0].split("=")[1];
    console.log("check for this time is "+ check);
    if (check != null) {
-     counting = check;
+     counting = Number(check);
    }
 
 
@@ -32,14 +32,16 @@
     var seconds = Math.floor(diffValue % 60);
     var msg = minutes + "minuts" + seconds + "seconds";
     document.all["timer"].innerHTML = msg;
-
+    console.log("counting IS "+ counting);
     counting += 1;
+    console.log("counting is "+ counting);
     document.cookie="temp = "+ counting +"; path=/;  max-age= 11;";
 
   }
 
   else{
     clearInterval(timer);
+    console.log("counting is over at "+ counting);
   }
 }
 
